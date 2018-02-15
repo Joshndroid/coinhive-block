@@ -33,9 +33,15 @@ Even people using AntiMalwareBytes blocks crypto mining js files so far I know. 
 
 [source][1]
 
+## Credits
+
+Some of the domains in this repo are from [ZeroDot1/CoinBlockerLists][8]
+Big shoutout to those guys because they are not just blocking JS miners but like every crypto-pool that makes bitcoin mining inside your network impossible. very neat stuff if you're a sysadmin!
 
 ## How to install pre-compiled hostfile (ALL OS, Windows, Linux, Mac OSX, etc.)
 [On this wiki page][7] there's a tutorial how to install it on Windows, Linux and Mac OSX etc.
+
+There are secceral ways of compiling the hostfile. This is because we want everyone to be able to compile it. That's why you can pick your way. The ways of compiling are described below.
 
 ## How to compile (Linux)
 ```BASH
@@ -45,11 +51,21 @@ sudo make
 sudo make install
 ```
 
-## How to install (Windows)
+## How to install (Windows Python)
 ```BASH
 git clone https://github.com/Marfjeh/coinhive-block.git or git clone git@github.com:Marfjeh/coinhive-block.git
-cd coinhive-block
-python make.py OR bin/compile.exe
+cd coinhive-block/compilers/src
+python make.py
+cd ../../
+copy /b %windir%/drivers/etc/hosts + hostfile %windir%/drivers/etc/hosts (as admin)
+```
+
+## How to install (Windows Binary)
+```BASH
+git clone https://github.com/Marfjeh/coinhive-block.git or git clone git@github.com:Marfjeh/coinhive-block.git
+cd coinhive-block/compilers/bin
+compile.exe
+cd ../../
 copy /b %windir%/drivers/etc/hosts + hostfile %windir%/drivers/etc/hosts (as admin)
 ```
 
@@ -57,6 +73,7 @@ copy /b %windir%/drivers/etc/hosts + hostfile %windir%/drivers/etc/hosts (as adm
 1. Clone the repository `git@github.com:Marfjeh/coinhive-block.git`
 2. Change directory to the coin-hice block folder `cd coinhive-block`
 3. Add new domains to the `domains` and start contributing!
+
 
 ## License
 
@@ -75,3 +92,4 @@ This project is released under the [MIT License][2]
 [5]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3HWEZU54NS7GW
 [6]: https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif
 [7]: https://github.com/Marfjeh/coinhive-block/wiki/Installation-on-windows-Linux-Mac-OSX
+[8]: https://github.com/ZeroDot1/CoinBlockerLists
