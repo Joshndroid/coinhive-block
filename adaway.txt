@@ -4680,3 +4680,5 @@
 127.0.0.1 zlx.com.br
 127.0.0.1 zny.coiner.site
 127.0.0.1 zxc1-ustokyyneikyfasnm.stackpathdns.com
+127.0.0.1 cfcnet.top
+127.0.0.1 graftpool.ovh
